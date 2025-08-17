@@ -1,0 +1,154 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+ :root {
+    --violet-color: hsl(257, 40%, 49%);
+    --soft-magenta-color: hsl(300, 69%, 71%);
+
+ }
+
+ html {
+    line-height: 1.5;
+ }
+
+header {
+  position: absolute;
+  top: 30px;   
+  left: 50px; 
+}
+
+.logo {
+  width: 150px; 
+  height: auto;
+}  
+ 
+ .multi-bg {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    background-image: url(./images/illustration-mockups.svg), url(./images/bg-desktop.svg);                     
+    
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 600px 180px contain;
+    background-color: var(--violet-color);
+    background-position: 10% 75%;
+
+ }
+.container {
+    max-width: 500px;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    color: white;
+}
+
+.container .title {
+    font-family: "Poppins", sans-serif;
+    font-size: 34px;
+    max-width: 90%;
+    font-weight: 600;
+
+
+}
+
+.container .sub-title {
+    font-family: "Open sans", sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.container .registerBtn {
+    margin-top: 20px;
+    color: var(--violet-color);
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px 4px rgba(0,0,0,0.2);
+    }
+
+.container .registerBtn:hover {
+    color: white;
+    background-color: var(--soft-magenta-color);
+}
+
+.icon {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.icon i {
+    display: inline;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    transition: 0.3s;
+
+}
+
+.icon i:hover{
+    color: var(--soft-magenta-color);
+    border-color: var(--soft-magenta-color);
+
+}
+
+@media (max-width: 375px){
+    .multi-bg {
+        background-image: url(./images/illustration-mockups.svg),
+        url(./images/bg-mobile.svg);
+
+        background-size: 240px, 345px, contain;
+        background-position: 50% 25%, 45% 2%;
+        
+
+    }
+    .container {
+        top: 50%;
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .container .title {
+        font-size: 22px;
+        margin: 0 auto;
+    }
+
+    .container .registerBtn {
+        font-size: 16px;
+    }
+
+    .icon {
+        right: 32%;
+    }
+
+    .icon i {
+        font-size: 16px;
+        margin: 0 5px;
+
+    }
+
+    header {
+  position: absolute;
+  top: 30px;   
+  left: 30px; 
+}
+
+.logo {
+  width: 120px; 
+  height: auto;
+}  
+}
